@@ -41,7 +41,7 @@ export default function HistoryScreen() {
   const getServiceLabel = (service: string) => {
     const services: Record<string, string> = {
       exterior: 'Extérieur',
-      interior: 'Intérieur', 
+      interior: 'Intérieur',
       full: 'Complet',
       other: 'Autre',
     };
@@ -67,17 +67,15 @@ export default function HistoryScreen() {
         </Text>
         <Text style={styles.price}>{item.price.toLocaleString()} FCFA</Text>
       </View>
-      
+
       <View style={styles.washDetails}>
         <Text style={styles.service}>{getServiceLabel(item.service)}</Text>
         <Text style={styles.plate}>
           {item.expand?.client?.plate || 'Plaque inconnue'}
         </Text>
       </View>
-      
-      <Text style={styles.date}>
-        {formatDate(item.created!)}
-      </Text>
+
+      <Text style={styles.date}>{formatDate(item.created!)}</Text>
     </View>
   );
 
@@ -144,7 +142,6 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingTop: 50,
     marginBottom: 20,
   },
   backButton: {

@@ -678,7 +678,6 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingTop: 50,
     marginBottom: 20,
   },
   backButton: { fontSize: 16, color: '#3498db', marginRight: 15 },

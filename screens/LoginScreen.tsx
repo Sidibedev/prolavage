@@ -235,6 +235,7 @@ export default function LoginScreen() {
               onChangeText={setName}
               placeholder="Ex: Mamadou Ndiaye"
               autoCapitalize="words"
+              placeholderTextColor={'#ccc'}
             />
           </View>
         )}
@@ -248,6 +249,7 @@ export default function LoginScreen() {
             placeholder="Ex: 77123456"
             keyboardType="phone-pad"
             autoCapitalize="none"
+            placeholderTextColor={'#ccc'}
           />
         </View>
 
@@ -261,6 +263,7 @@ export default function LoginScreen() {
             keyboardType="numeric"
             maxLength={5}
             secureTextEntry
+            placeholderTextColor={'#ccc'}
           />
         </View>
 
@@ -286,7 +289,7 @@ export default function LoginScreen() {
         >
           <Text style={styles.switchText}>
             {mode === 'login'
-              ? 'Pas de compte ? Créez-le'
+              ? 'Pas encore de compte ? Créez-le'
               : 'Déjà inscrit ? Se connecter'}
           </Text>
         </TouchableOpacity>

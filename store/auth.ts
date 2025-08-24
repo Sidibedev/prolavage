@@ -7,6 +7,7 @@ interface AuthState {
   user: User | null;
   loading: boolean;
   login: (phone: string, pin: string) => Promise<void>;
+  register: (name: string, phone: string, pin: string) => Promise<void>;
   logout: () => Promise<void>;
   checkAuth: () => void;
 }

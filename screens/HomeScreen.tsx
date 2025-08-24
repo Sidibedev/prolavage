@@ -52,14 +52,15 @@ export default function HomeScreen() {
   }, []);
 
   const handleLogout = async () => {
-    Alert.alert('Déconnexion', 'Êtes-vous sûr de vouloir vous déconnecter ?', [
-      { text: 'Annuler', style: 'cancel' },
-      {
-        text: 'Déconnexion',
-        style: 'destructive',
-        onPress: async () => await logout(),
-      },
-    ]);
+    await logout();
+    // Alert.alert('Déconnexion', 'Êtes-vous sûr de vouloir vous déconnecter ?', [
+    //   { text: 'Annuler', style: 'cancel' },
+    //   {
+    //     text: 'Déconnexion',
+    //     style: 'destructive',
+    //     onPress: async () => await logout(),
+    //   },
+    // ]);
   };
 
   const todayLabel = new Date().toLocaleDateString('fr-FR', {
